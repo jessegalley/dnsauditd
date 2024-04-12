@@ -1,0 +1,27 @@
+# dnsauditd.yaml configuration
+#
+# place this file in one of the following locations:
+#   ./ 
+#   /etc/ 
+#   /etc/dnsauditd.conf
+#
+# 2024 Jesse Galley 
+# github.com/jessegalley/dnsauditd
+
+# daemon configuration
+threads: 10       # number of concurrent dns lookups
+tickrate: 1000    # tickrate in milliseconds of the main thread 
+
+# database configuration 
+# currently only type: mysql is supported
+database:
+  host: 127.0.0.1
+  user: dnsauditd
+  pass: temp123
+  name: dnsauditd
+  type: mysql
+
+# dns resolution configuration
+resolver: 127.0.0.1
+timeout: 5
+
